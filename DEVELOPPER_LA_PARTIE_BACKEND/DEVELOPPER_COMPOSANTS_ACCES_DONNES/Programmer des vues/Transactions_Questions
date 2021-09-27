@@ -1,0 +1,20 @@
+-- Questions -- Programmer des Transactions -- 
+
+1 - "Que concluez-vous ?"
+    La conclusion est que la commande de transaction ne peut par conséquent pas être éxécutée.
+
+
+2 - "Les données sont-elles modifiables par d'autres utilisateurs (ouvrez une nouvelle fenêtre de requête pour interroger le fournisseur 120 par une instruction SELECT) ?"
+    Elles ne sont pas modifiables par un autre utilisateur à partir du moment la base de données est altéré via transaction. 
+
+
+3 - "La transaction est-elle terminée ?"
+    Elle n'est pas terminée car il n'y a pas eu d'instructions de clôture ROLLBACK ou COMMIT.
+
+
+4 - "Comment rendre la modification permanente ?"
+    En utilisant l'instruction COMMIT.
+
+
+5 - "Comment annuler la transaction ?"
+    En utilisant l'instruction ROLLBACK.

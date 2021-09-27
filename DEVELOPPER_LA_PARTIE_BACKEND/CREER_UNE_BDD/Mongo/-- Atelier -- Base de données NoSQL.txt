@@ -1,0 +1,11 @@
+-- Atelier -- Base de données NoSQL
+
+Le terme NoSQL est utilisé pour parler, d'une famille de SGBD, d'un type de base de données dont la particularité est d'être non relationelles. Ce type est utilisé pour le stockage et l'analyse du Big Data en temps réel.  
+
+Une BDD non relationnelles ne stocke pas de la même manière que la BDD relationelle, elle permet un stockage plus volumineux de données grâce au format clé-valeur.
+
+Elles sont nées pour répondre à un problème survenu au milieu des années 2000 : l'augmentation des flux de données et la necessité des les stocker (on rappelle que chaque année, le volume de données se multiplie par 2), l'émergeance des bases NoSQL est dûe à un mouvement initié par les géants du web qui ont compris que leur système est une réponse fiable à ce problème.
+
+Il y a plusieurs type de base NoSQL : les bases au format clé-valeur, les bases de données orientés document, les bases de données orientés graphe et les bases en colonnes.
+
+Il y a plusieurs cas qui necessitent l'utilisation d'une base NoSQL, mais l'utilisation la plus pertinente semble être pour la création d'applications ou de site comportant un énorme flux de données qui doivent être stockés, un réseau social ou un site marchant par exmeple.
