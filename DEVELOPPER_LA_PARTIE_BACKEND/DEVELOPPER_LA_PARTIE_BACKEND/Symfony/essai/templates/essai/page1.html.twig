@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EssaiController!{% endblock %}
+
+{% block body %}
+<h1>Liste des Clients</h1>
+{% for client in clients %}
+
+<div>
+            {{ client.nom }}
+            {{ client.prenom }}
+            {{ client.age}}
+
+</div>
+{% endfor %}
+{% endblock %}
