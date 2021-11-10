@@ -1,7 +1,7 @@
 -- Algorithme -- 
 -- Exercices --
 
--- Partie 1 --
+-- Partie 1 -- VARIABLES --
 
 1.1 - A = 3 ; B = 4 
 
@@ -34,32 +34,549 @@ en revanche, si nous inversions les deux dernières instructions : A et B auraie
 1.9 - "Il donnera le résultat suivant C = '42312', étant donné que les deux caractères se mettront à la suite dans l'ordre choisi (ici A puis B). C'est une concaténation."
 
 
--- Partie 2 --
+
+-- Partie 2 -- LECTURE/ECRITURE --
+
 
 2.1 - "Ce programme va nous afficher le résultat de Val (231) et celui de Double(462)."
 
-2.2 - Début
-      Ecrire "Entrez un nombre : "
-      Lire A 
-      Res <-- A * A 
-      Ecrire Res 
-      Fin
 
-2.3 - Début 
-      Ecrire "Entrez votre prénom : "
-      Lire Prenom
-      Ecrire "Bonjour, "  Prenom  " !"
-      Fin 
+2.2 -
+    Variables A, Res en Entier
+    Début
+        Ecrire "Entrez un nombre : "
+        Lire A 
+        Res <-- A * A 
+        Ecrire Res 
+    Fin
 
-2.4 - Début 
-      Ecrire "Entrez le prix HT de votre article : "  
-      Lire HT 
-      Ecrire "Entrez la quantité : "
-      Lire NB 
-      Ecrire "Entrez la TVA : "
-      Lire TVA 
-      TTC <-- HT*TVA*NB 
-      Ecrire TTC 
-      Fin 
 
-      
+2.3 -
+    Variables Prenom en Caractere
+    Début 
+        Ecrire "Entrez votre prénom : "
+        Lire Prenom
+        Ecrire "Bonjour, "  Prenom  " !"
+    Fin 
+
+
+2.4 - 
+    Variable HT, NB, TVA, TTC en Numérique  
+    Début 
+        Ecrire "Entrez le prix HT de votre article : "  
+        Lire HT 
+        Ecrire "Entrez la quantité : "
+        Lire NB 
+        Ecrire "Entrez la TVA : "
+        Lire TVA 
+        TTC <-- HT*TVA*NB 
+        Ecrire TTC 
+    Fin 
+
+
+
+-- Partie 3 -- TESTS --      
+
+
+3.1 - 
+    Variable A en Entier 
+    Début 
+        Ecrire "Entrez un nombre : "  
+        Lire A 
+        Si A > 0 Alors
+            Ecrire "Ce nombre est positif."
+        Sinon
+            Ecrire "Ce nombre est négatif."
+        FinSi
+    Fin 
+
+
+3.2 - 
+    Variables A, B en Entier
+    Début 
+        Ecrire "Entrez deux nombres : "
+        Lire A, B  
+        Si (A > 0 ET B > 0) OU (A < 0 ET B < 0) Alors
+            Ecrire "Le produit est positif."
+        Sinon 
+            Ecrire "Le produit est négatif."
+        FinSi
+    Fin      
+
+
+3.3 - 
+    Variables A, B, C en Caractere
+    Début 
+        Ecrire "Entrez trois prénoms : "
+        Lire A, B, C 
+        Si (A < B) ET (B < C) Alors
+            Ecrire "Vos prénoms sont rangés dans l'ordre alphabétique."
+        Sinon 
+            Ecrire "Vos prénoms ne sont pas dans l'ordre aplphabétique."
+        FinSi
+    Fin 
+
+
+3.4 -
+    Variables A en Entier
+    Début
+        Ecrire "Entrez un nombre : "
+        Lire A 
+        Si A > 0 Alors
+            Ecrire "Votre nombre est positif."
+        SinonSi A = 0 Alors
+            Ecrire "Votre nombre est nul."
+        Sinon     
+            Ecrire "Votre nombre est négatif."
+        FinSi
+    Fin                            
+
+
+3.5 - 
+    Variables A, B en Entier
+    Début 
+        Ecrire "Entrez deux nombres : "
+        Lire A, B 
+        Si (A > 0 ET B > 0) OU (A < 0 ET B < 0) Alors
+            Ecrire "Leur produit est positif."
+        SinonSi (A = 0 OU B = 0) Alors 
+            Ecrire "Leur produit est nul."
+        Sinon 
+            Ecrire "Leur produit est négatif."
+        FinSi
+    Fin                 
+
+
+
+3.6 -
+    Variables A 
+    Début 
+        Ecrire "Entrez un âge : "
+        Lire A
+        Si A =< 5 Alors
+            Ecrire "Erreur, recommencez." 
+        SinonSi (A => 6 ET A =< 7) Alors
+            Ecrire "Poussin"
+        SinonSi (A => 8 ET A =< 9) Alors
+            Ecrire "Pupille"
+        SinonSi (A => 10 ET A =< 11) Alors
+            Ecrire "Minime"
+        Sinon 
+            Ecrire "Cadet"
+        FinSi
+    Fin
+
+    "Il est possible de concevoir plusieurs algorithmes pour le même résultat, 
+    l'ordre dans lequel j'ai entrer les instrcutions est de l'âge le plus jeune au plus vieux, l'inverse, par exemple, est possible."
+
+
+
+
+-- Partie 4 -- TESTS 2 --
+
+
+4.1 -
+    Si Tutu <= Toto + 4 ET Tata <> "OK" Alors
+        Tutu ← Tutu - 1
+    Sinon
+        Tutu ← Tutu + 1
+    Finsi
+
+
+4.2 -   
+    Variables mn, h en Numérique
+    Début 
+        Ecrire
+        Lire h, mn
+        mn <-- mn + 1
+            Si mn = 60 Alors
+            mn <-- 0
+            h <-- h + 1
+                FinSi
+                Si h = 24 Alors
+                h <-- 0
+                FinSi
+        Ecrire "Dans une minute il sera ", h, " heures", mn, " minutes."        
+    Fin 
+
+
+4.3 -
+    Variables h, m, s en Numérique
+    Début
+        Ecrire "Entrez les heures, puis les minutes, puis les secondes : "
+        Lire h, mn, s
+            s ← s + 1
+        Si s = 60 Alors
+            s ← 0
+            mn ← mn + 1
+        FinSi
+        Si m = 60 Alors
+            m ← 0
+            h ← h + 1
+        FinSi
+        Si h = 24 Alors
+            h ← 0
+        FinSi
+        Ecrire "Dans une seconde il sera ", h, "h", mn, "mn et ", s, "s"
+    Fin
+    
+
+4.4 -
+    Variables n, p en Numérique
+    Début
+        Ecrire "Nombre de photocopies : "
+        Lire n
+        Si n <= 10 Alors
+            p ← n * 0,1
+        SinonSi n <= 30 Alors
+            p ← 10 * 0,1 + (n – 10) * 0,09
+        Sinon
+            p ← 10 * 0,1 + 20 * 0,09 + (n – 30) * 0,08
+        FinSi
+        Ecrire "Le prix total est: " p
+    Fin
+
+
+4.5 -  
+    Variables sexe en Caractère
+    Variables age en Numérique
+    Variables C1, C2 en Booléen
+    Début
+        Ecrire "Entrez le sexe (M ou F): "
+        Lire sexe
+        Ecrire "Entrez l’âge : "
+        Lire age
+        C1 ← sexe = "M" ET age > 20
+        C2 ← sexe = "F" ET (age > 18 ET age < 35)
+        Si C1 ou C2 Alors
+            Ecrire "Imposable"
+        Sinon
+            Ecrire "Non Imposable"
+        FinSi
+    Fin
+
+
+
+4.6 - 
+    Variables A, B, C, D en Numérique
+    Variables E1, E2, E3, E4 en Booléen
+    Début
+        Ecrire "Entrez les scores des quatre prétendants :"
+        Lire A, B, C, D
+        E1 ← A > 50
+        E2 ← B > 50 OU C > 50 OU D > 50
+        E3 ← A >= B ET A >= C ET A >= D
+        E4 ← A >= 12,5
+        Si E1 Alors
+            Ecrire "Elu au premier tour"
+        Sinonsi E2 OU Non(E4) Alors
+            Ecrire "Eliminé"
+        SinonSi E3 Alors
+            Ecrire "Ballotage favorable"
+        Sinon
+            Ecrire "Ballotage défavorable"
+        FinSi
+    Fin  
+
+
+
+4.7 - 
+VARIABLES age, permis, accident, contrat en Numérique
+          res en Caractere 
+Début
+  LIRE age, permis, accident, contrat
+  SI (age<25 ET permis<2) ALORS
+    DEBUT_SI
+    SI (accident == 0) ALORS
+      DEBUT_SI
+      res PREND_LA_VALEUR "Rouge"
+      FIN_SI
+      SINON
+        DEBUT_SINON
+        res PREND_LA_VALEUR "Refusé"
+        FIN_SINON
+    FIN_SI
+    SINON
+      DEBUT_SINON
+      SI ((age<25 ET permis>=2) OU (age>=25 ET permis<2)) ALORS
+        DEBUT_SI
+        SI (accident == 0) ALORS
+          DEBUT_SI
+          res PREND_LA_VALEUR "Orange"
+          FIN_SI
+          SINON
+            DEBUT_SINON
+            SI (accident == 1) ALORS
+              DEBUT_SI
+              res PREND_LA_VALEUR "Rouge"
+              FIN_SI
+              SINON
+                DEBUT_SINON
+                res PREND_LA_VALEUR "Refusé"
+                FIN_SINON
+            FIN_SINON
+        FIN_SINON
+        SINON
+          DEBUT_SINON
+          SI (accident == 0) ALORS
+            DEBUT_SI
+            res PREND_LA_VALEUR "Vert"
+            FIN_SI
+            SINON
+              DEBUT_SINON
+              SI (accident == 1) ALORS
+                DEBUT_SI
+                res PREND_LA_VALEUR "Orange"
+                FIN_SI
+                SINON
+                  DEBUT_SINON
+                  SI (accident == 2) ALORS
+                    DEBUT_SI
+                    res PREND_LA_VALEUR "Rouge"
+                    FIN_SI
+                    SINON
+                      DEBUT_SINON
+                      res PREND_LA_VALEUR "Refusé"
+                      FIN_SINON
+                  FIN_SINON
+              FIN_SINON
+          FIN_SINON
+      FIN_SI
+  SI (contrat > 5) ALORS
+    DEBUT_SI
+    SI (res == "Rouge") ALORS
+      DEBUT_SI
+      res PREND_LA_VALEUR "Orange"
+      FIN_SI
+      SINON
+        DEBUT_SINON
+        SI (res == "Orange") ALORS
+          DEBUT_SI
+          res PREND_LA_VALEUR "Vert"
+          FIN_SI
+          SINON
+            DEBUT_SINON
+            SI (res == "Vert") ALORS
+              DEBUT_SI
+              res PREND_LA_VALEUR "Bleu"
+              FIN_SI
+            FIN_SINON
+        FIN_SINON
+    FIN_SI
+  AFFICHER* "Le tarif que vous obtiendrez est le : "
+  AFFICHER res
+FIN_ALGORITHME
+
+
+4.8 -
+
+
+
+-- Partie 5 -- BOUCLES --
+
+
+5.1 - 
+    Variable n du type Numérique 
+    Début 
+        n <-- 100
+        TantQue (n<>1 ET n<>2 ET n<>3) Faire
+            Lire n 
+            Si (n<>1 ET n<>2 ET n<>3) Alors
+            Ecrire "Réponse erronée, réessayez."
+            FinSi
+        FinTantQue
+        Ecrire "Vous avez bien séléctionné : ", n 
+    Fin 
+
+
+5.2 -
+    Variable n du type Numérique
+    Début
+        n <-- 999
+        TantQue (n<10 OU n>20) Faire
+            Ecrire "Entrez un nombre : "
+            Lire n 
+                Si (n<10) Alors 
+                Ecrire "Plus grand!" 
+                SinonSi (n>20) Alors
+                Ecrire "Plus petit!"
+                FinSi 
+        FinTantQue 
+        Ecrire "Votre nombre est bon, bravo"
+    Fin 
+
+
+5.3 - 
+    Variable n, r du type Numérique 
+    Début 
+        Ecrire "Entrez un nombre : "
+        Lire n
+        r <-- (n + 10)
+            TantQue (r <> n) Faire
+                Si (r <> n) 
+                    n <-- (n + 1)  
+                FinSi 
+                Ecrire n 
+            FinTantQue
+        Ecrire "BRAVO"
+    Fin 
+
+
+5.4 - 
+    Variables n, r du type Numérique
+    Début 
+        Ecrire "Entrez un nombre : "
+        r <-- 0
+        Lire n 
+            Pour r De r A 9
+                n <-- n+1
+                Ecrire n
+            FinPour
+        Ecrire "Bravo"
+    Fin 
+
+
+5.5 - 
+    Variables n, m, res de type Numérique 
+    Début 
+        Ecrire "Entrez un chiffre/nombre : " 
+        m <-- 0
+        Lire n 
+        Ecrire "Table de " n " : "
+            Pour m De m A 10 
+                res <-- (n*m)
+                Ecrire n "x" m "=" res 
+            FinPour
+        Ecrire "BRAVO"    
+    Fin               
+
+
+
+5.6 - 
+    Variables n, m, res de type Numérique 
+    Début 
+        Ecrire "Entre un chiffre/nombre : "
+        Lire n
+        m <-- 1
+        res <-- 0
+            Pour m De 1 A n
+                res <-- (res+ m)
+            FinPour
+        Ecrire res 
+    Fin 
+
+
+
+5.7 -
+    Variables n, m, res de type Numérique 
+    Début 
+        Ecrire "Entre un chiffre/nombre : "
+        Lire n
+        m <-- 1
+        res <-- 1
+            Pour m De 1 A n
+                res <-- (res*m)
+            FinPour
+        Ecrire res 
+    Fin 
+                
+
+
+5.8 -
+    Variables n, m, res, max, posmax de type Numérique
+    Début
+        max <-- 0
+            Pour m De 1 A 20
+            Ecrire "Entrez le nombre numéro " m " : " 
+            Lire n 
+                Si (n>max) Alors 
+                    max <-- n
+                    posmax <-- m 
+                FinSi 
+            FinPour
+        res <-- max
+        Ecrire "Le plus grand des nombres entrés est : " res 
+        Ecrire "C'était le nombre numéro : " posmax 
+    Fin                 
+
+5.9 - 
+    Variables n, m, res, max, posmax de type Numérique
+    Début
+        n <-- 1
+        max <-- 0
+        m <-- 0
+            TantQue (n<>0)
+            m <-- m+1
+            Ecrire "Entrez le nombre numéro " m " : " 
+            Lire n 
+                Si (n>max) Alors 
+                    max <-- n
+                    posmax <-- m 
+                FinSi 
+            FinTantQue
+        res <-- max
+        Ecrire "Le plus grand des nombres entrés est : " res 
+        Ecrire "C'était le nombre numéro : " posmax 
+    Fin                
+
+5.10 - 
+     Variables achat, totachat, rendu, paiement de type Numérique
+     Début 
+        achat <-- 1
+            TantQue (achat <> 0) Faire
+                Ecrire "Prix article"
+                Lire achat 
+                totachat <-- totachat + achat
+            FinTantQue
+        Ecrire "La somme des achats est : " totachat " €."
+        Lire paiement 
+            Si (paiement >= totachat) Alors
+                rendu <-- paiement - totachat
+                Ecrire "Monnaie : " rendu " €."
+                    TantQue (rendu >= 10) Faire
+                        Ecrire "Voilà 10€"
+                        rendu <-- (rendu-5)
+                    FinTantQue         
+                    TantQue (rendu >= 5) Faire
+                        Ecrire "Voilà 5€"
+                        rendu <-- (rendu-10)
+                    FinTantQue  
+                    TantQue (rendu >= 1) Faire
+                        Ecrire "Voilà 1€"
+                        rendu <-- (rendu-1)
+                    FinTantQue
+            FinSi        
+        Ecrire "Bonne journée, à bientôt"
+            Sinon 
+                Ecrire "Vous devez de la thune petit escroc."
+                Ecrire "Raboule " rendu " mec".             
+     Fin    FinSinon 
+
+
+
+-- Partie 6 -- TABLEAUX -- 
+
+6.1 - 
+    Variable a du type liste
+    Variable b du type Numérique 
+        Début 
+            Pour b De 0 A 6 
+               a[b] <-- 0
+                Ecrire a[b]
+            FinPour
+        Fin        
+
+
+6.2 - voyelle[5]
+        Début 
+            voyelle[0] <-- "a"
+            voyelle[1] <-- "e"
+            voyelle[2] <-- "i"
+            voyelle[3] <-- "o"
+            voyelle[4] <-- "u"
+            voyelle[5] <-- "y"
+        Fin 
+
+
+            
+            
